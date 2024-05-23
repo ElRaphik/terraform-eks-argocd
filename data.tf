@@ -31,11 +31,11 @@ data "aws_arn" "current_user" {
 data "aws_caller_identity" "current" {}
 
 data "aws_eks_cluster_auth" "test" {
-  name = "test"
+  name = "tf-argo-cluster"
 }
 
 data "aws_eks_cluster" "test" {
-  name = "test"
+  name = "tf-argo-cluster"
 
   depends_on = [aws_eks_cluster.test]
 }
